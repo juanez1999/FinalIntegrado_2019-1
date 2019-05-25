@@ -1,5 +1,6 @@
 package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +47,8 @@ public class Registro extends AppCompatActivity {
                 contras2= contra2.getText().toString().trim();
                 if(contras1.equals(contras2)){
                     crearUsuario();
+                    Intent i = new Intent(Registro.this, Home.class);
+                    startActivity(i);
                 }else{
                     Toast.makeText(Registro.this,"Error confirmacion contraseña",Toast.LENGTH_SHORT).show();
                 }
@@ -55,7 +58,7 @@ public class Registro extends AppCompatActivity {
     }
 
     public void crearUsuario(){
-        Usuario user= new Usuario(codigos,correos,contras1,contras2);
+        Usuario user= new Usuario(codigos,correos,contras1);
         ref.child("Usuarios").child(codigos).setValue(user);
     }
 

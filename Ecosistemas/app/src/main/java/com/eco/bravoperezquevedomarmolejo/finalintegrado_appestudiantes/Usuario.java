@@ -9,11 +9,11 @@ public class Usuario {
 
     public Usuario(){}
 
-    public Usuario(String codigo,String correo, String contra1, String contra2){
+    public Usuario(String codigo,String correo, String contra1){
         this.codigo=codigo;
         this.correo=correo;
         this.contra1=contra1;
-        this.contra2=contra2;
+
     }
 
     public String getCodigo() {
