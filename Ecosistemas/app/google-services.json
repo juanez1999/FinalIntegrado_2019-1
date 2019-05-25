@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "434126006394-hatqj5ak7hpoqn1mhsfeq8m0tq0ttgtq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes",
+            "certificate_hash": "c9a3716260012e9ed2ce463bc81cfef606e1fb89"
+          }
+        },
+        {
           "client_id": "434126006394-6egm0e9muihf8v8sdt60lr3qp0am4j8j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

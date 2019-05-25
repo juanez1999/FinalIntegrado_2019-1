@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_percepcion_home"
         android:layout_width="231dp"
         android:layout_height="192dp"
         android:layout_marginStart="8dp"
