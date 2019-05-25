@@ -35,7 +35,7 @@
 
     <EditText
         android:id="@+id/edt_codigo_registro"
-        android:layout_width="338dp"
+        android:layout_width="324dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
@@ -52,10 +52,10 @@
 
     <EditText
         android:id="@+id/edt_correo_registro"
-        android:layout_width="338dp"
+        android:layout_width="324dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/campos_texto"
         android:ems="10"
@@ -65,14 +65,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_codigo_registro" />
 
     <EditText
         android:id="@+id/edt_contra1_registro"
-        android:layout_width="338dp"
+        android:layout_width="324dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/campos_texto"
         android:ems="10"
@@ -82,14 +82,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_correo_registro" />
 
     <EditText
         android:id="@+id/edt_contra2_registro"
-        android:layout_width="338dp"
+        android:layout_width="324dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/campos_texto"
         android:ems="10"
@@ -99,69 +99,54 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_contra1_registro" />
 
     <TextView
         android:id="@+id/tv_codigo_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif"
         android:text="Codigo Estudiante"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/edt_codigo_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.965" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_correo_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif"
         android:text="Correo electronico"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/edt_correo_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_contraseña_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif"
         android:text="Contraseña"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/edt_contra1_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_confirmar_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif"
         android:text="Confirmar contraseña"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/edt_contra2_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent" /><![CDATA[
 
     />
