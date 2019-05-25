@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "434126006394",
+    "firebase_url": "https://finalintegrado.firebaseio.com",
+    "project_id": "finalintegrado",
+    "storage_bucket": "finalintegrado.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434126006394:android:a7800f32e0851318",
+        "android_client_info": {
+          "package_name": "com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434126006394-6egm0e9muihf8v8sdt60lr3qp0am4j8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes",
+            "certificate_hash": "44d2d5683bfb34e74f294bfc30afa6375601c68e"
+          }
+        },
+        {
+          "client_id": "434126006394-9vdapg4gdgngeeav62b4vodkog644mog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7gcby0mmZF4986y9Heh6Tk_UjisDsGPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434126006394-9vdapg4gdgngeeav62b4vodkog644mog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
