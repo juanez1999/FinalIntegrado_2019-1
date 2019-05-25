@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Registro extends AppCompatActivity {
 
     private ImageButton registrar;
@@ -13,7 +16,8 @@ public class Registro extends AppCompatActivity {
     private EditText contra1;
     private EditText contra2;
 
-
+    private FirebaseAuth auth;
+    private FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

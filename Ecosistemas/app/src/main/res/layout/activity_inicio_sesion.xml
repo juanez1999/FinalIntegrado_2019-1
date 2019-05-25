@@ -15,6 +15,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="103dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,23 +36,26 @@
         app:srcCompat="@drawable/login" />
 
     <EditText
-        android:id="@+id/edt_codigo_inicio"
+        android:id="@+id/edt_contrasena_inicio"
         android:layout_width="338dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/campos_texto"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btn_incio_inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_contrasena_inicio" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_codigo_inicio"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edt_contrasena_inicio"
+        android:id="@+id/edt_codigo_inicio"
         android:layout_width="338dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -59,7 +64,7 @@
         android:background="@drawable/campos_texto"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:inputType="textPersonName"
+        android:inputType="textCapSentences"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +75,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
+        android:fontFamily="@font/lato_regular"
         android:text="Código de estudiante"
         android:textColor="@color/White"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/edt_contrasena_inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -82,11 +91,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
+        android:fontFamily="@font/lato_regular"
         android:text="Contraseña"
         android:textColor="@color/White"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/edt_codigo_inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 
