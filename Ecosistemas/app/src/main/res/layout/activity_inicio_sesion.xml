@@ -42,7 +42,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/campos_texto"
         android:ems="10"
-        android:fontFamily="@font/Lato-Light"
+        android:fontFamily="sans-serif"
         android:inputType="textPersonName"
         android:text="NAme"
         app:layout_constraintEnd_toEndOf="parent"
