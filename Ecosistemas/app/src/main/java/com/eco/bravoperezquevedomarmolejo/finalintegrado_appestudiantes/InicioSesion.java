@@ -30,8 +30,16 @@ public class InicioSesion extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.getValue(String.class) != null) {
-                    Log.e("Alfa", dataSnapshot.getValue(String.class));
+                if(dataSnapshot.getValue(Usuario.class) != null) {
+                    Usuario user = dataSnapshot.getValue(Usuario.class);
+                    String val = user.getCodigo();
+                    Log.e("Alfa", "Llega hasta aquí");
+
+                    if(user == null) {
+                        Log.e("Alfa", "NO HAY USER");
+                    }
+
+                    Log.e("Alfa", val);
                 } else {
                     Log.e("Alfa", "Está null");
                 }
