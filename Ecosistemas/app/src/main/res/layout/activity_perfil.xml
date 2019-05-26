@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.285"
-        app:srcCompat="@drawable/barraPerfil" />
+        app:srcCompat="@drawable/barra_perfil" />
 
     <ImageButton
         android:id="@+id/btn_insignias_perfil"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/img_fondo_perfil"
         app:layout_constraintVertical_bias="0.233"
-        app:srcCompat="@drawable/barraPerfil" />
+        app:srcCompat="@drawable/barra_perfil" />
 
     <TextView
         android:id="@+id/tv_progreso_perfil"
