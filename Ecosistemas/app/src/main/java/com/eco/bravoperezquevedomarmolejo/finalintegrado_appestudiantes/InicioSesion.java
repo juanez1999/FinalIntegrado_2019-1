@@ -32,14 +32,18 @@ public class InicioSesion extends AppCompatActivity {
 
                 if(dataSnapshot.getValue(Usuario.class) != null) {
                     Usuario user = dataSnapshot.getValue(Usuario.class);
-                    String val = user.getCodigo();
+                    String val = user.getCorreo();
                     Log.e("Alfa", "Llega hasta aquí");
 
                     if(user == null) {
                         Log.e("Alfa", "NO HAY USER");
                     }
 
-                    Log.e("Alfa", val);
+                    if(val != null) {
+                        Log.e("Alfa", val);
+                    } else {
+                        Log.e("Alfa", "Código null");
+                    }
                 } else {
                     Log.e("Alfa", "Está null");
                 }
