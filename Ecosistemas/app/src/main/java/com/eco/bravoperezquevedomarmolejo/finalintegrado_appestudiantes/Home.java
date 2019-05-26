@@ -1,5 +1,6 @@
 package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,8 @@ public class Home extends AppCompatActivity {
         perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(Home.this, Perfil.class);
+                startActivity(i);
             }
         });
 
