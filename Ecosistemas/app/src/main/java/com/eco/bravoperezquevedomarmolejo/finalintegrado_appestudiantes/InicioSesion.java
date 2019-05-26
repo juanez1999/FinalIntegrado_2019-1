@@ -1,5 +1,6 @@
 package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,36 +28,6 @@ public class InicioSesion extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_sesion);
                 db = FirebaseDatabase.getInstance();
 
-        db.getReference().child("Usuarios").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                if(dataSnapshot.getValue(Usuario.class) != null) {
-                    Usuario user = dataSnapshot.getValue(Usuario.class);
-                    String val = user.getCorreo();
-                    Log.e("Alfa", "Llega hasta aquí");
-
-                    if(user == null) {
-                        Log.e("Alfa", "NO HAY USER");
-                    }
-
-                    if(val != null) {
-                        Log.e("Alfa", val);
-                    } else {
-                        Log.e("Alfa", "Código null");
-                    }
-                } else {
-                    Log.e("Alfa", "Está null");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
         codigo = findViewById(R.id.edt_codigo_inicio);
         contrasena = findViewById(R.id.edt_contrasena_inicio);
 
@@ -64,6 +36,59 @@ public class InicioSesion extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                final String cod = codigo.getText().toString();
+                final String contra = contrasena.getText().toString();
+
+                if(cod.length() == 9) {
+                    db.getReference().child("Usuarios").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                            boolean codigoValido = false;
+                            boolean contraCorrecta = false;
+
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                                Usuario user = ds.getValue(Usuario.class);
+                                if(cod.matches(user.getCodigo())) {
+                                    codigoValido = true;
+                                }
+
+                                if(codigoValido && contra.matches(user.getContra1())) {
+                                    contraCorrecta = true;
+                                }
+
+                                if(!codigoValido) {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(InicioSesion.this, "Código no registrado", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                } else {
+                                    if(contraCorrecta) {
+                                        Intent i = new Intent(InicioSesion.this, Home.class);
+                                        startActivity(i);
+                                    } else {
+                                        Toast.makeText(InicioSesion.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                } else {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(InicioSesion.this, "Código incorrecto. Intenta cambiarlo.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
 
             }
         });
