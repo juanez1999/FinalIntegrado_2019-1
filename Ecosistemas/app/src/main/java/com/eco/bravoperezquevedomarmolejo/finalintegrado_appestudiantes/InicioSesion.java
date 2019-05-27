@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +21,8 @@ public class InicioSesion extends AppCompatActivity {
     private FirebaseDatabase db;
     private EditText codigo;
     private EditText contrasena;
+    private TextView olvidar;
+    private TextView registrar;
     private ImageButton login;
 
     @Override
@@ -30,8 +33,17 @@ public class InicioSesion extends AppCompatActivity {
 
         codigo = findViewById(R.id.edt_codigo_inicio);
         contrasena = findViewById(R.id.edt_contrasena_inicio);
+        registrar = findViewById(R.id.tv_registrate_inicio);
 
         login = findViewById(R.id.btn_incio_inicio);
+
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(InicioSesion.this, Registro.class);
+                startActivity(i);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

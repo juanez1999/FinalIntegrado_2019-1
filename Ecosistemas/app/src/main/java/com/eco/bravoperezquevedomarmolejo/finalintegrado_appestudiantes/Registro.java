@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -23,6 +24,7 @@ public class Registro extends AppCompatActivity {
     private EditText correo;
     private EditText contra1;
     private EditText contra2;
+    private TextView iniciar;
     private String codigos;
     private String correos;
     private String contras1;
@@ -40,6 +42,16 @@ public class Registro extends AppCompatActivity {
         contra2=findViewById(R.id.edt_contra2_registro);
         db= FirebaseDatabase.getInstance();
         ref= db.getReference();
+
+        iniciar = findViewById(R.id.tv_iniciar_registro);
+
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Registro.this, InicioSesion.class);
+                startActivity(i);
+            }
+        });
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
