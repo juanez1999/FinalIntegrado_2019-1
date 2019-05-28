@@ -27,75 +27,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/img_foto_perfil"
         app:layout_constraintEnd_toEndOf="@+id/img_fondo_perfil"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/navegacion" />
 
-    <ImageButton
-        android:id="@+id/btn_progreso_perfil"
-        android:layout_width="309dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285"
-        app:srcCompat="@drawable/barra_perfil" />
-
-    <ImageButton
-        android:id="@+id/btn_insignias_perfil"
-        android:layout_width="291dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_fondo_perfil"
-        app:layout_constraintVertical_bias="0.233"
-        app:srcCompat="@drawable/barra_perfil" />
-
-    <TextView
-        android:id="@+id/tv_progreso_perfil"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Progreso"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/img_tarjeta1_perfil"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintBottom_toBottomOf="@+id/img_fondo_perfil"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/tv_insignias_perfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/lato_regular"
-        android:text="Insignias"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/img_tarjeta1_perfil"
-        app:layout_constraintEnd_toEndOf="@+id/btn_insignias_perfil"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:background="@color/White"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingView">
+
+    </android.support.v4.view.ViewPager>
 
     <ImageView
         android:id="@+id/img_foto_perfil"
@@ -111,67 +83,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cerebro" />
 
-    <ImageView
-        android:id="@+id/img_tarjeta1_perfil"
-        android:layout_width="343dp"
-        android:layout_height="139dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_fondo_perfil"
-        app:layout_constraintVertical_bias="0.127"
-        app:srcCompat="@drawable/progreso_perfil" />
 
-    <ImageView
-        android:id="@+id/img_tarjeta2_perfil"
-        android:layout_width="343dp"
-        android:layout_height="139dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_tarjeta1_perfil"
-        app:layout_constraintVertical_bias="0.118"
-        app:srcCompat="@drawable/progreso_perfil" />
-
-    <TextView
-        android:id="@+id/tv_percepcion_perfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/josefin_bold"
-        android:text="Percepción Visual"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
-        app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil" />
-
-    <TextView
-        android:id="@+id/tv_memoria_perfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/josefin_bold"
-        android:text="Memoria"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
-        app:layout_constraintTop_toTopOf="@+id/img_tarjeta2_perfil" />
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/nav_home"
@@ -184,15 +96,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/global_nav" />
 
-    <ProgressBar
-        android:id="@+id/pb_visual_perfil"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="284dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintEnd_toEndOf="@+id/img_tarjeta1_perfil"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="@+id/img_tarjeta1_perfil"
-        app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil" />
+
 
 </android.support.constraint.ConstraintLayout>
