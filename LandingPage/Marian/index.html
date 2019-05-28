@@ -4,9 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Icono Favicon -->
+  <link rel="icon" type="image/png" href="./img/icon.png"/>
+  <!-- Css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- Sripts -->
+  <script type="text/javascript">
+   window.onload = function() {
+     document.onmousemove = function(e) {
+       var x = -(e.clientX/20);
+       var y = -(e.clientY/20);
+       this.getElementById('prueba').style.backgroundPosition = x + 'px ' + y + 'px';
+     };
+   };
+  </script>
   <title>AstroMind</title>
 </head>
 <body>
-  Este es mi landing page
+    <div id="prueba">
+      <div class="fondoHome">
+        <div class="container">
+          <nav class="navbar-expand-sm navbar-dark sticky-top">
+            <ul class="navbar-nav justify-content-end navegacion">
+              <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Beneficios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Testimonio</a></li>
+            </ul>
+          </nav>
+          <div class="calltoaction">
+            <div class="titulo">
+              EXPANDE TU MENTE
+            </div>
+            <div class="subtitulo">
+              Conoce los principios psicológicos que definen tu visión del mundo
+            </div>
+            <div class="descargar">
+              <img src="./img/Descargar.svg" alt="Descargar la app">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acercade">
+      Este espacio es para el siguiente tema
+    </div>
 </body>
 </html>
