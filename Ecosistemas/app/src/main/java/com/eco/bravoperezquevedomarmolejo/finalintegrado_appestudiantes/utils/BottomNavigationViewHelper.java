@@ -22,7 +22,7 @@ public class BottomNavigationViewHelper {
         bnv.setTextVisibility(false);
     }
 
-    public static void enableNavigation(final Context context, BottomNavigationViewEx view, final String codigo) {
+    public static void enableNavigation(final Context context, BottomNavigationViewEx view) {
         view.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -33,13 +33,11 @@ public class BottomNavigationViewHelper {
 
                     case R.id.menu_home:
                         Intent i1 = new Intent(context, Home.class);
-                        i1.putExtra("Codigo", codigo);
                         context.startActivity(i1);
                         break;
 
                     case R.id.menu_perfil:
                         Intent i2 = new Intent(context, Perfil.class);
-                        i2.putExtra("Codigo", codigo);
                         context.startActivity(i2);
                         break;
                 }

@@ -42,48 +42,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            android:background="@color/White"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        </android.support.v7.widget.Toolbar>
-
-        <android.support.v7.widget.Toolbar
+        <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            android:background="@color/White"
+            app:tabTextColor="@color/Black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </android.support.v7.widget.Toolbar>
-
-    </android.support.design.widget.AppBarLayout>
+         </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingView">
+        android:layout_height="463dp"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingView"
+        app:layout_constraintBottom_toTopOf="@+id/nav_home"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
 
     </android.support.v4.view.ViewPager>
-
-    <ImageView
-        android:id="@+id/img_foto_perfil"
-        android:layout_width="150dp"
-        android:layout_height="159dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/img_tarjeta1_perfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cerebro" />
-
-
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/nav_home"
@@ -96,6 +73,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/global_nav" />
 
-
+    <ImageView
+        android:id="@+id/img_foto_perfil"
+        android:layout_width="106dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663"
+        app:srcCompat="@drawable/cerebro" />
 
 </android.support.constraint.ConstraintLayout>
