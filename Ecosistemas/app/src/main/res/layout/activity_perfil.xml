@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondopantallaperfil"
-    tools:context=".Perfil">
+    tools:context=".Activities.Perfil">
 
     <ImageView
         android:id="@+id/img_fondo_perfil"
@@ -173,72 +173,16 @@
         app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
         app:layout_constraintTop_toTopOf="@+id/img_tarjeta2_perfil" />
 
-    <ImageButton
-        android:id="@+id/btn_nav_perfil"
-        android:layout_width="420dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_home_perfil"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.849"
-        app:srcCompat="@drawable/nav_global" />
-
-    <ImageButton
-        android:id="@+id/btn_home_perfil"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/nav_home"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/White"
+        app:itemIconTint="@drawable/navegacion_global"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.849"
-        app:srcCompat="@drawable/home_boton" />
-
-    <ImageButton
-        android:id="@+id/btn_notificacion_perfil"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_home_perfil"
-        app:layout_constraintHorizontal_bias="0.342"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.849"
-        app:srcCompat="@drawable/boton_notificaciones" />
-
-    <ImageButton
-        android:id="@+id/btn_perfil_perfil"
-        android:layout_width="53dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/btn_home_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.849"
-        app:srcCompat="@drawable/boton_perfilpressed" />
+        app:menu="@menu/global_nav" />
 
     <ProgressBar
         android:id="@+id/pb_visual_perfil"

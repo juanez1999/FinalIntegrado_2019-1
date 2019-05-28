@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:background="@color/Background"
+    tools:context=".Activities.Home">
 
     <ImageButton
         android:id="@+id/btn_comenzar_home"
@@ -74,56 +75,16 @@
         app:layout_constraintTop_toBottomOf="@+id/img_percepcion_home"
         app:layout_constraintVertical_bias="0.483" />
 
-    <ImageButton
-        android:id="@+id/btn_home_perfil"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/nav_home"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/White"
+        app:itemIconTint="@drawable/navegacion_global"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.868"
-        app:srcCompat="@drawable/boton_home" />
-
-    <ImageButton
-        android:id="@+id/btn_notificacion_home"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_home_perfil"
-        app:layout_constraintHorizontal_bias="0.324"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.868"
-        app:srcCompat="@drawable/boton_notificaciones" />
-
-    <ImageButton
-        android:id="@+id/btn_perfil_home"
-        android:layout_width="53dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/btn_home_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comenzar_home"
-        app:layout_constraintVertical_bias="0.868"
-        app:srcCompat="@drawable/perfil_boton" />
+        app:menu="@menu/global_nav" />
 
 
 </android.support.constraint.ConstraintLayout>
