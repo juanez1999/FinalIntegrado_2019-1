@@ -1,6 +1,7 @@
 package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +10,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Registro extends AppCompatActivity {
 
@@ -25,10 +29,6 @@ public class Registro extends AppCompatActivity {
     private EditText contra1;
     private EditText contra2;
     private TextView iniciar;
-    private String codigos;
-    private String correos;
-    private String contras1;
-    private String contras2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,25 +56,46 @@ public class Registro extends AppCompatActivity {
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                codigos= codigo.getText().toString().trim();
-                correos= correo.getText().toString().trim();
-                contras1= contra1.getText().toString().trim();
-                contras2= contra2.getText().toString().trim();
-                if(contras1.equals(contras2)){
-                    crearUsuario();
-                    Intent i = new Intent(Registro.this, Home.class);
-                    startActivity(i);
+
+                final boolean[] registrado = {false};
+
+                ref.child("Usuarios").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        for(DataSnapshot child : dataSnapshot.getChildren()) {
+                            Usuario usuario = child.getValue(Usuario.class);
+                            if(codigo.getText().toString().trim().matches(usuario.getCodigo())) {
+                                registrado[0] = true;
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+                if(contra1.getText().toString().trim().equals(contra2.getText().toString().trim())){
+
+                    if(!registrado[0]) {
+                        Usuario user = new Usuario(codigo.getText().toString().trim(), correo.getText().toString().trim(), contra1.getText().toString().trim());
+
+                        Intent i = new Intent(Registro.this, Home.class);
+                        i.putExtra("Codigo", user.getCodigo());
+                        startActivity(i);
+                    }
                 }else{
-                    Toast.makeText(Registro.this,"Error confirmacion contraseña",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registro.this,"Las contraseñas no coinciden",Toast.LENGTH_SHORT).show();
+                }
+
+                if(registrado[0]) {
+                    Toast.makeText(Registro.this, "Código ya registrado", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-    }
-
-    public void crearUsuario(){
-        Usuario user= new Usuario(codigos,correos,contras1);
-        ref.child("Usuarios").child(codigos).setValue(user);
     }
 
 }

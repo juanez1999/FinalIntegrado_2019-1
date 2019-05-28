@@ -80,6 +80,7 @@ public class InicioSesion extends AppCompatActivity {
                                 } else {
                                     if(contraCorrecta) {
                                         Intent i = new Intent(InicioSesion.this, Home.class);
+                                        i.putExtra("Codigo", user.getCodigo());
                                         startActivity(i);
                                     } else {
                                         Toast.makeText(InicioSesion.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
