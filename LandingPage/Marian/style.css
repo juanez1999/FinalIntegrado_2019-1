@@ -1,11 +1,12 @@
 *{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
-body, html {
+/* body, html {
   height: 100%;
-}
+} */
 
 #prueba{
   width: 100vw;
@@ -19,7 +20,7 @@ body, html {
 .fondoHome{
   height: 100%;
   width: 100%;
-  background: url(./img/fondosuperior.svg) no-repeat center center fixed;
+  background: url(./img/fondosuperior.svg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -69,4 +70,135 @@ body, html {
 .descargar img{
   margin: 20px auto;
   width: 80%;
+}
+
+.acercade{
+  width: 100vw;
+  height: 100vh;
+  background: url(./img/fondoacerca.svg) no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.beneficios{
+
+  width: 100vw;
+  height: 100vh;
+  background: url(./img/fondobeneficios.svg) no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.testimonio{
+  width: 100vw;
+  height: 100vh;
+  background: url(./img/fondoTestimonio.svg) no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.obtener{
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background: url(./img/descargaYa.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.descarga{
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.obtener .descarga h2{
+  font-family: 'Josefin Sans', sans-serif ;
+  font-weight: 700;
+  font-size: calc(2rem + 1vw);
+  color: white;
+  padding-bottom: 20px;
+}
+
+.descarga img{
+  width: 80%;
+}
+
+.pie{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  background: url(./img/footer.svg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.pie .ayuda h3, h2{
+  font-family: 'Josefin Sans', sans-serif;
+  color: #1D3750;
+  font-size: calc(1rem + 1vw);
+  margin: 0;
+}
+
+.pie .ayuda h2{
+  font-weight: 700;
+}
+
+.pie .ayuda p{
+  padding: 15px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: calc(0.8rem + 0.3vw);
+  color: #1D3750;
+}
+
+.pie .ayuda a{
+  color: #1D3750;
+}
+
+.links{
+  font-family: 'Lato', sans-serif;
+  color: #1D3750;
+}
+
+.links h4{
+  font-weight: 700;
+  font-size: calc(1rem + 1vw);
+}
+
+.links li{
+  padding: 5px 0;
+}
+
+.links a{
+  color: #1D3750;
+  font-size: calc(0.7rem + 0.3vw);
+}
+
+.interes{
+  display: flex;
+  flex-flow: row;
+}
+
+.interes .enlaces{
+  padding-right: 50px;
+}
+
+.derechos{
+  color: #1D3750;
+  font-size: calc(0.6rem + 0.3vw);
 }

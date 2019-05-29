@@ -10,7 +10,7 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class Home extends AppCompatActivity {
 
-    private String codigoEstudiante;
+    public static String codigoEstudiante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,6 @@ public class Home extends AppCompatActivity {
         nav = findViewById(R.id.nav_home);
         nav.setSelectedItemId(R.id.menu_home);
         BottomNavigationViewHelper.setupBottomNavigationView(nav);
-        BottomNavigationViewHelper.enableNavigation(Home.this, nav, codigoEstudiante);
+        BottomNavigationViewHelper.enableNavigation(Home.this, nav);
     }
 }

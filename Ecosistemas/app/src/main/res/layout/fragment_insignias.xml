@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mentemaestra"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp">
+            </ImageView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Mente maestra"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/Black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:text="Obtenida al aprender todos los temas disponibles">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/afinando_ojo"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp">
+            </ImageView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Afinando el ojo"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/Black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:text="Obtenida al completar todo el contenido de percepción visual">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/memorizador"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp">
+            </ImageView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Memorizador"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/Black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:text="Obtenida al completar todo el contenido de memoria">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

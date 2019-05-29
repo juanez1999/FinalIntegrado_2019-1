@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-    android:id="@+id/img_tarjeta1_perfil"
-    android:layout_width="343dp"
-    android:layout_height="139dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/img_fondo_perfil"
-    app:layout_constraintVertical_bias="0.127"
-    app:srcCompat="@drawable/progreso_perfil" >
+        android:id="@+id/img_tarjeta1_perfil"
+        android:layout_width="343dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085"
+        app:srcCompat="@drawable/progreso_perfil">
 
     </ImageView>
 
@@ -39,49 +40,51 @@
     </ImageView>
 
     <TextView
-    android:id="@+id/tv_percepcion_perfil"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="12dp"
-    android:layout_marginEnd="8dp"
-    android:fontFamily="@font/josefin_bold"
-    android:text="Percepción Visual"
-    android:textColor="@color/colorPrimaryDark"
-    android:textSize="20sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.213"
-    app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
-    app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil">
-    </TextView>
+        android:id="@+id/tv_percepcion_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/josefin_bold"
+        android:text="Percepción Visual"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/img_tarjeta1_perfil"
+        app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil"></TextView>
 
     <TextView
-    android:id="@+id/tv_memoria_perfil"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="12dp"
-    android:layout_marginEnd="8dp"
-    android:fontFamily="@font/josefin_bold"
-    android:text="Memoria"
-    android:textColor="@color/colorPrimaryDark"
-    android:textSize="20sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.154"
-    app:layout_constraintStart_toStartOf="@+id/img_fondo_perfil"
-    app:layout_constraintTop_toTopOf="@+id/img_tarjeta2_perfil">
-    </TextView>
+        android:id="@+id/tv_memoria_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/josefin_bold"
+        android:text="Memoria"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/img_tarjeta2_perfil"
+        app:layout_constraintTop_toTopOf="@+id/img_tarjeta2_perfil"></TextView>
 
     <ProgressBar
-    android:id="@+id/pb_visual_perfil"
-    style="?android:attr/progressBarStyleHorizontal"
-    android:layout_width="284dp"
-    android:layout_height="20dp"
-    android:layout_marginTop="56dp"
-    app:layout_constraintEnd_toEndOf="@+id/img_tarjeta1_perfil"
-    app:layout_constraintHorizontal_bias="0.525"
-    app:layout_constraintStart_toStartOf="@+id/img_tarjeta1_perfil"
-    app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil" >
-    </ProgressBar>
+        android:id="@+id/pb_visual_perfil"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="284dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="@+id/img_tarjeta1_perfil"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/img_tarjeta1_perfil"
+        app:layout_constraintTop_toTopOf="@+id/img_tarjeta1_perfil"></ProgressBar>
+
+    <TextView
+        android:id="@+id/tv_porcentajevisual_fragmento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="0%"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/pb_visual_perfil"
+        app:layout_constraintEnd_toEndOf="@+id/img_tarjeta1_perfil"
+        app:layout_constraintStart_toStartOf="@+id/img_tarjeta1_perfil" />
 
 </android.support.constraint.ConstraintLayout>
