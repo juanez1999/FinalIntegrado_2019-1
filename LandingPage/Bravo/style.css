@@ -1,0 +1,204 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("images/fondo1.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+  background-image: url("images/header.png");
+  position: fixed;
+}
+
+.container {
+  position: relative;
+  z-index: -1;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: #FFFFFF;
+}
+
+.titulo {
+  font-size: 55px;
+  margin-left: 20px;
+}
+
+nav li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 10px;
+
+}
+
+nav li a{
+  color: white;
+}
+
+nav li a:hover {
+  color: white;
+  font-weight: 700;
+}
+
+.btn-light {
+  width: 140px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 10px
+}
+
+.intro {
+  padding-top: 150px;
+}
+
+.mockup {
+  margin: -50px;
+  display: inline-block;
+}
+
+p{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.descarga {
+  margin-top: 30px;
+}
+
+.texto {
+  text-align: right;
+  position: relative;
+  display: inline-block;
+}
+
+.icono {
+  margin: 5px 10px;
+}
+
+.estudia {
+  margin-top: 330px;
+}
+
+.textoCentrado {
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.oscuro {
+  color: #000;
+}
+
+.izquierda {
+  text-align: left;
+}
+
+.planeta {
+  position: relative;
+  left: 200px;
+  bottom: 170px;
+}
+
+.personaje{
+  position: relative;
+  top: 200px;
+}
+
+.dinamica {
+  position: relative;
+  top: 100px;
+  right: 50px;
+}
+
+.imagen {
+  position: relative;
+  right: 40px;
+}
+
+.pregunta {
+  height: 492px;
+  text-align: center;
+  padding: 80px;
+  background-image: url("images/fondo2.svg");
+  margin-top: 200px;
+}
+
+.textoCentrado {
+  z-index: 1;
+  text-align: center;
+  max-width: 500px;
+}
+
+p.textoCentrado {
+  position: relative;
+  top: 30px;
+  left: -50px;
+}
+
+.brain {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  padding: 20px 40px;
+  width: 100%;
+  height: 300px;
+}
+
+.nombreApp {
+  position: relative;
+  right: -25px;
+}
+
+.separador {
+  width: 4px;
+  height: 100%;
+  background: black;
+}
+
+.contenidoFooter {
+  padding: 20px 30px;
+}
+
+.subtitulo {
+  font-size: 28px;
+}
+
+.oscuro a {
+  color: black;
+}
+
+.contenidoFooter p {
+  font-size: 20px;
+}
+
+.logo {
+  margin: 0 10px;
+}
