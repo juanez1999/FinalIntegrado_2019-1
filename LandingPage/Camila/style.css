@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("img/mockup1.png");
+  background-attachment: fixed;
+  height: 2057px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 25px 70px;
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  margin:  10px 25px;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 90px;
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  max-width: 420px;
+}
+
+.ContenedorTextoIntro {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 70px;
+}
+
+.Texto {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: column;
+  margin: 30px 0;
+}
+
+.contenedor {
+  display: flex;
+}
+
+.linea {
+  background-color: white;
+  width: 5px;
+  height: 140px;
+  margin-right: 20px;
+}
+
+.centrado {
+  margin: 40px 150px 40px 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.fondoPj {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+  top: -200px;
+}
+
+.seccionDos {
+  position: relative;
+  z-index: 1;
+  top:-350px;
+  height: 928px;
+  background-image: url("img/fondo1.png");
+}
+
+.tresItems {
+  padding-top: 200px;
+  margin: 0 150px;
+  justify-content: space-around;
+}
+
+.contenedorVertical {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.tituloActividad {
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #292C48;
+}
+
+.tarjetaActividad {
+  margin-top: 20px;
+  max-width: 200px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.seccionTres {
+  height: 1130px;
+  background-color: white;
+  position: relative;
+  z-index: -1;
+  top: -1550px;
+}
+
+.personaje {
+  position: relative;
+  z-index: 2;
+  top: -730px;
+  justify-content: flex-end;
+  margin: 0 30px;
+}
+
+.tres {
+  margin: 0 100px;
+  align-items: flex-start;
+  padding-top: 400px;
+}
+
+.negro {
+  text-align: left;
+  color: black;
+}
+
+h1.negro {
+  text-align: left;
+  font-size: 48px;
+  color: black;
+}
+
+p.negro {
+  padding-top: 50px;
+  max-width: 600px;
+}
+
+.mockupDos {
+  position: relative;
+  left: -110px;
+  top: -30px;
+}
+
+footer {
+  height: 400px;
+  position: relative;
+  top: -1550px;
+  background-color: #5C5E83;
+}
+
+.contenedorFooter {
+  margin: 60px 110px 0 90px;
+  align-items: flex-start;
+}
+
+.footer {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #292C48;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.larga {
+  margin-top: 80px;
+  height: 240px;
+}
+
+.footerDerecha {
+  align-items: flex-end;
+}
+
+.derecha {
+  text-align: right;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.duda {
+  position: relative;
+  top: -30px;
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #D4DDE2;
+}
