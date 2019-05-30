@@ -1,4 +1,4 @@
-package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils;
+package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
 public class ProgresoUsuario {
 

@@ -1,4 +1,4 @@
-package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils;
+package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.Activities.Home;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.Activities.Perfil;
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
 
 public class FragmentoProgreso extends Fragment {
 
