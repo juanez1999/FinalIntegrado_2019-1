@@ -1,26 +1,16 @@
 package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.Activities;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.FragmentoInsignias;
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.FragmentoProgreso;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.FragmentoInsignias;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.FragmentoProgreso;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.SectionPageAdapter;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.SectionPageAdapter;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.BottomNavigationViewHelper;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class Perfil extends AppCompatActivity {

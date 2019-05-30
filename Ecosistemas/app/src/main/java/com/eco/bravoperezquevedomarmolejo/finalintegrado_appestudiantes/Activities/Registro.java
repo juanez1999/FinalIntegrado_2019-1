@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.Usuario;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
