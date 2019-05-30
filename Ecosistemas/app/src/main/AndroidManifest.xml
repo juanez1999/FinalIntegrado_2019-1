@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <activity
             android:name=".Activities.Perfil"
@@ -28,6 +29,8 @@
 =======
 =======
 >>>>>>> parent of 48e955e... Actividad creada :D
+=======
+>>>>>>> parent of 48e955e... Actividad creada :D
         <activity android:name=".Activities.Perfil"
             android:screenOrientation="portrait"/>
 
@@ -39,6 +42,9 @@
 
         <activity android:name=".Activities.MainActivity"
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 48e955e... Actividad creada :D
+=======
 >>>>>>> parent of 48e955e... Actividad creada :D
 =======
 >>>>>>> parent of 48e955e... Actividad creada :D
@@ -53,9 +59,14 @@
         </activity>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity
             android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait" />
+=======
+        <activity android:name=".Activities.InicioSesion"
+            android:screenOrientation="portrait"/>
+>>>>>>> parent of 48e955e... Actividad creada :D
 =======
         <activity android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait"/>
