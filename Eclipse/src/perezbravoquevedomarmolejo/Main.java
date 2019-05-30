@@ -27,6 +27,7 @@ public class Main extends PApplet implements Observer{
 	
 	public void setup() {
 		ref = Comunicacion.getRef();
+		ref.addObserver(this);
 		gifs = new Gif[4];
 		
 		imagen = loadImage("imagen0.png");
@@ -39,6 +40,7 @@ public class Main extends PApplet implements Observer{
 		gifs[0] = new Gif(this, "gif0.gif");
 		gifs[1] = new Gif(this, "gif1.gif");
 		gifs[2] = new Gif(this, "gif2.gif");
+		gifs[3] = new Gif(this, "gif3.gif");
 	}
 	
 	public void draw() {
@@ -69,17 +71,24 @@ public class Main extends PApplet implements Observer{
 				break;
 				
 			case 4:
+				if(!gifs[3].isPlaying()) {
+					gifs[3].play();
+				}
 				image(gifs[3], 0, 0);
 				break;
 				
 			case 5:
+				if(!gifs[3].isPlaying()) {
+					gifs[3].play();
+				}
 				image(gifs[3], 0, 0);
-				imageMode(CORNER);
+				imageMode(CENTER);
 				if(correcto) {
 					image(respuesta[0], width/2, height/2);
 				} else {
 					image(respuesta[1], width/2, height/2);
 				}
+				imageMode(CORNER);
 		}
 	}
 
@@ -98,11 +107,17 @@ public class Main extends PApplet implements Observer{
 			variablePintar = 4;
 		}
 		
-		if(variablePintar == 4 && msg.matches("Tamano")) {
-			variablePintar = 5;
-			correcto = true;
-		} else if(variablePintar == 4) {
-			correcto = false;
+		if(variablePintar == 4) {
+			if(msg.matches("Tamano")) {
+				variablePintar = 5;
+				correcto = true;
+				ref.enviar("Correcto");
+			} else if(msg.matches("Color") || msg.matches("Forma")){
+				variablePintar = 5;
+				correcto = false;
+				ref.enviar("Incorrecto");
+			}
+			
 		}
 	}
 
