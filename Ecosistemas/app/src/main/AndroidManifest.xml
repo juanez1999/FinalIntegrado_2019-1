@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 <<<<<<< HEAD
-        <activity android:name=".Activities.Actividadespercepcion"></activity>
+<<<<<<< HEAD
+
         <activity
             android:name=".Activities.Perfil"
             android:screenOrientation="portrait" />
@@ -25,6 +26,8 @@
         <activity
             android:name=".Activities.MainActivity"
 =======
+=======
+>>>>>>> parent of 48e955e... Actividad creada :D
         <activity android:name=".Activities.Perfil"
             android:screenOrientation="portrait"/>
 
@@ -35,6 +38,9 @@
             android:screenOrientation="portrait"/>
 
         <activity android:name=".Activities.MainActivity"
+<<<<<<< HEAD
+>>>>>>> parent of 48e955e... Actividad creada :D
+=======
 >>>>>>> parent of 48e955e... Actividad creada :D
             android:screenOrientation="portrait">
 
@@ -46,9 +52,14 @@
 
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity
             android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait" />
+=======
+        <activity android:name=".Activities.InicioSesion"
+            android:screenOrientation="portrait"/>
+>>>>>>> parent of 48e955e... Actividad creada :D
 =======
         <activity android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait"/>
