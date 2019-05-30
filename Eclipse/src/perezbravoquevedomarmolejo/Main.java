@@ -15,6 +15,7 @@ public class Main extends PApplet implements Observer{
 	private Gif[] gifs;
 	private int variablePintar;
 	private boolean correcto;
+	private int contador;
 	
 	public static void main(String[] args) {
 		PApplet.main("perezbravoquevedomarmolejo.Main");
@@ -29,6 +30,7 @@ public class Main extends PApplet implements Observer{
 		ref = Comunicacion.getRef();
 		ref.addObserver(this);
 		gifs = new Gif[4];
+		contador = 0;
 		
 		imagen = loadImage("imagen0.png");
 		
@@ -44,6 +46,8 @@ public class Main extends PApplet implements Observer{
 	}
 	
 	public void draw() {
+		
+		if(contador>0)contador--;
 		switch(variablePintar) {
 			case 0:
 				image(imagen, 0, 0);
@@ -87,6 +91,8 @@ public class Main extends PApplet implements Observer{
 					image(respuesta[0], width/2, height/2);
 				} else {
 					image(respuesta[1], width/2, height/2);
+						if(contador==0)variablePintar=0;
+			
 				}
 				imageMode(CORNER);
 		}
@@ -115,6 +121,7 @@ public class Main extends PApplet implements Observer{
 			} else if(msg.matches("Color") || msg.matches("Forma")){
 				variablePintar = 5;
 				correcto = false;
+				contador = 180;
 				ref.enviar("Incorrecto");
 			}
 			
