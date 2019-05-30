@@ -7,96 +7,113 @@
     android:background="@drawable/fondo_login"
     tools:context=".Activities.ActividadesPercepcion">
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/nav_actividadpercepcion"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/White"
-        app:itemIconTint="@drawable/navegacion_global"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/global_nav" />
-
     <TextView
         android:id="@+id/tv_percepcion_percepcion"
         android:layout_width="198dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/josefin_bold"
         android:text="Percepción Visual"
         android:textAlignment="center"
         android:textColor="@color/White"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_barraglobal_percepcion" />
 
     <ImageButton
         android:id="@+id/img_aprende_percepcion"
         android:layout_width="107dp"
         android:layout_height="115dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
         android:background="@null"
-        app:srcCompat="@drawable/aprende_boton"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="206dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_percepcion_percepcion"
+        app:srcCompat="@drawable/aprende_boton" />
 
     <ImageButton
         android:id="@+id/img_practica_percepcion"
         android:layout_width="107dp"
         android:layout_height="115dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
         android:background="@null"
-        app:srcCompat="@drawable/practica_boton"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="353dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_aprende_percepcion"
+        app:srcCompat="@drawable/practica_boton" />
 
     <ImageButton
         android:id="@+id/img_experimenta_percepcion"
         android:layout_width="107dp"
         android:layout_height="115dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
         android:background="@null"
-        app:srcCompat="@drawable/experimenta_boton"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="506dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_practica_percepcion"
+        app:srcCompat="@drawable/experimenta_boton" />
 
     <TextView
         android:id="@+id/tv_aprender_percepcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/lato_bold"
         android:text="Aprende"
         android:textColor="@color/White"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="243dp" />
+        app:layout_constraintStart_toEndOf="@+id/img_aprende_percepcion"
+        app:layout_constraintTop_toTopOf="@+id/img_aprende_percepcion" />
 
     <TextView
         android:id="@+id/tv_practicar_percepcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/lato_bold"
         android:text="Practica"
         android:textColor="@color/White"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="383dp" />
+        app:layout_constraintStart_toEndOf="@+id/img_practica_percepcion"
+        app:layout_constraintTop_toTopOf="@+id/img_practica_percepcion" />
 
     <TextView
-        android:id="@+id/tv_practicar_percepcion2"
+        android:id="@+id/tv_experimenta_percepcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/lato_bold"
         android:text="Experimenta"
         android:textColor="@color/White"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintStart_toEndOf="@+id/img_experimenta_percepcion"
+        app:layout_constraintTop_toTopOf="@+id/img_experimenta_percepcion" />
 
     <ImageView
         android:id="@+id/img_barraglobal_percepcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        app:srcCompat="@drawable/navegacion"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/navegacion" />
+
+    <ImageButton
+        android:id="@+id/btn_volver_percepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="@+id/img_barraglobal_percepcion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
 
 </android.support.constraint.ConstraintLayout>

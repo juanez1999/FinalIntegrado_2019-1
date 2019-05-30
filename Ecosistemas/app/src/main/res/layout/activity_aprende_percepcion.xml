@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_login"
+    tools:context=".Activities.AprendePercepcion">
+
+    <ImageView
+        android:id="@+id/img_barraglobal_percepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/navegacion" />
+7
+
+    <ImageButton
+        android:id="@+id/btn_volver_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="@+id/img_barraglobal_percepcion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/tv_titulo_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/josefin_bold"
+        android:text="Aprende"
+        android:textColor="@color/White"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_barraglobal_percepcion" />
+
+    <TextView
+        android:id="@+id/tv_subtitulo_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Percepción visual"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_aprendeP" />
+
+    <ImageView
+        android:id="@+id/img_aprende_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitulo_aprendeP"
+        app:srcCompat="@drawable/planeta_aprende" />
+
+    <ImageButton
+        android:id="@+id/btn_constancias_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/img_aprende_aprendeP"
+        app:layout_constraintTop_toBottomOf="@+id/tv_constancias_aprendeP"
+        app:srcCompat="@drawable/boton_empezar_interaccion" />
+
+    <TextView
+        android:id="@+id/tv_constancias_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Constancias perceptuales"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/img_aprende_aprendeP"
+        app:layout_constraintTop_toTopOf="@+id/img_aprende_aprendeP" />
+
+    <ImageView
+        android:id="@+id/img_explora_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_aprende_aprendeP"
+        app:srcCompat="@drawable/planeta_practica" />
+
+    <TextView
+        android:id="@+id/tv_leyes_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Leyes de Gestalt"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/img_explora_aprendeP"
+        app:layout_constraintTop_toTopOf="@+id/img_explora_aprendeP" />
+
+    <ImageButton
+        android:id="@+id/btn_leyes_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/img_explora_aprendeP"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leyes_aprendeP"
+        app:srcCompat="@drawable/boton_empezar_interaccion" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_explora_aprendeP"
+        app:srcCompat="@drawable/planeta_explora" />
+
+    <TextView
+        android:id="@+id/tv_indicios_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Indicios monoculares \n y binoculares"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ImageButton
+        android:id="@+id/btn_indicios_aprendeP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_indicios_aprendeP"
+        app:srcCompat="@drawable/boton_empezar_interaccion" />
+
+</android.support.constraint.ConstraintLayout>

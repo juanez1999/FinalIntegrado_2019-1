@@ -3,6 +3,8 @@ package com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.Activit
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.BottomNavigationViewHelper;
@@ -11,6 +13,7 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 public class Home extends AppCompatActivity {
 
     public static String codigoEstudiante;
+    private ImageButton comenzar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,15 @@ public class Home extends AppCompatActivity {
 
         setupNav();
 
+        comenzar = findViewById(R.id.btn_comenzar_home);
+
+        comenzar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, ActividadesPercepcion.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void setupNav() {

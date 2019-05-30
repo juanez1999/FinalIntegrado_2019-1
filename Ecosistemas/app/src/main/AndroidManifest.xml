@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ActividadesPercepcion"></activity>
+        <activity android:name=".Activities.ActividadesPercepcion" />
         <activity
             android:name=".Activities.Perfil"
             android:screenOrientation="portrait" />
@@ -33,6 +33,10 @@
         <activity
             android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait" />
+        <activity android:name=".Activities.AprendePercepcion" />
+        <activity android:name=".Activities.AprendeConstancias" />
+        <activity android:name=".Activities.EjemplosConstancias" />
+        <activity android:name=".Activities.PracticaConstancias"></activity>
     </application>
 
 </manifest>

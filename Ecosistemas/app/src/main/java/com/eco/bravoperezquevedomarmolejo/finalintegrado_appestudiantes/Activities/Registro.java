@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.ProgresoUsuario;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -81,7 +82,10 @@ public class Registro extends AppCompatActivity {
 
                     if(!registrado[0]) {
                         Usuario user = new Usuario(codigo.getText().toString().trim(), correo.getText().toString().trim(), contra1.getText().toString().trim());
-
+                        db.getReference().child("Usuarios").child(codigo.getText().toString().trim()).setValue(user);
+                        ProgresoUsuario progreso = new ProgresoUsuario("0", "0", "0");
+                        db.getReference().child("Progresos").child("PercepcionVisual").child(codigo.getText().toString().trim()).setValue(progreso);
+                        db.getReference().child("Progresos").child("Memoria").child(codigo.getText().toString().trim()).setValue(progreso);
                         Intent i = new Intent(Registro.this, Home.class);
                         i.putExtra("Codigo", user.getCodigo());
                         startActivity(i);

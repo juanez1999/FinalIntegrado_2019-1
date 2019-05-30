@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.FragmentoInsignias;
-import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.FragmentoProgreso;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.FragmentoInsignias;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.FragmentoProgreso;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.SectionPageAdapter;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.BottomNavigationViewHelper;
