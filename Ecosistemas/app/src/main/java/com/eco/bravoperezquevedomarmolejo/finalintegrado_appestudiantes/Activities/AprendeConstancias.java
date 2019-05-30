@@ -8,11 +8,13 @@ import android.widget.ImageButton;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.ModalConfirmarVolver;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.ProgresoUsuario;
 
 public class AprendeConstancias extends AppCompatActivity implements ModalConfirmarVolver.BottomSheetListener {
 
     private ImageButton volver;
     private ImageButton continuar;
+    private ProgresoUsuario progreso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

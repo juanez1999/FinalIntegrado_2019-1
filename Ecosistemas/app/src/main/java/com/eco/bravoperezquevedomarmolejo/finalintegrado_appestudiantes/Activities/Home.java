@@ -21,11 +21,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Intent i = getIntent();
-        codigoEstudiante = i.getStringExtra("Codigo");
-
-        Codigo.codigo = codigoEstudiante;
-
         setupNav();
 
         comenzar = findViewById(R.id.btn_comenzar_home);

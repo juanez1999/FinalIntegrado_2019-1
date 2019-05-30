@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Codigo;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.ProgresoUsuario;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Usuario;
 import com.google.firebase.database.DataSnapshot;
@@ -87,7 +88,7 @@ public class Registro extends AppCompatActivity {
                         db.getReference().child("Progresos").child("PercepcionVisual").child(codigo.getText().toString().trim()).setValue(progreso);
                         db.getReference().child("Progresos").child("Memoria").child(codigo.getText().toString().trim()).setValue(progreso);
                         Intent i = new Intent(Registro.this, Home.class);
-                        i.putExtra("Codigo", user.getCodigo());
+                        Codigo.codigo = user.getCodigo();
                         startActivity(i);
                     }
                 }else{

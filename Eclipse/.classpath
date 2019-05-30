@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="src/perezbravoquevedomarmolejo/core.jar"/>
 	<classpathentry kind="lib" path="src/perezbravoquevedomarmolejo/gifAnimation.jar"/>
+	<classpathentry kind="lib" path="src/libs/gifAnimation.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

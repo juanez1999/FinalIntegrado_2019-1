@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Codigo;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -59,7 +60,7 @@ public class InicioSesion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String cod = codigo.getText().toString();
+                final String cod = codigo.getText().toString().trim();
                 final String contra = contrasena.getText().toString();
 
                 if(cod.length() == 9) {
@@ -89,8 +90,8 @@ public class InicioSesion extends AppCompatActivity {
                                     });
                                 } else {
                                     if(contraCorrecta) {
+                                        Codigo.codigo = cod;
                                         Intent i = new Intent(InicioSesion.this, Home.class);
-                                        i.putExtra("Codigo", user.getCodigo());
                                         startActivity(i);
                                     } else {
                                         Toast.makeText(InicioSesion.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
