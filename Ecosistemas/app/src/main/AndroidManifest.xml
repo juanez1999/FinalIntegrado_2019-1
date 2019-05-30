@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".Activities.Actividadespercepcion"></activity>
         <activity
             android:name=".Activities.Perfil"
@@ -23,16 +24,35 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.MainActivity"
+=======
+        <activity android:name=".Activities.Perfil"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".Activities.Home"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".Activities.Registro"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".Activities.MainActivity"
+>>>>>>> parent of 48e955e... Actividad creada :D
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".Activities.InicioSesion"
             android:screenOrientation="portrait" />
+=======
+        <activity android:name=".Activities.InicioSesion"
+            android:screenOrientation="portrait"/>
+>>>>>>> parent of 48e955e... Actividad creada :D
     </application>
 
 </manifest>
