@@ -7,6 +7,7 @@ import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
 
 public class Percepcion extends AppCompatActivity {
 
+    private String aggggg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
