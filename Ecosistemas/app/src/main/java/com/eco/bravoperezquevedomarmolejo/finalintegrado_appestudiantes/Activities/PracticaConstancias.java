@@ -43,7 +43,7 @@ public class PracticaConstancias extends AppCompatActivity implements ModalConfi
         forma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String msg = "PracticarForma";
+                String msg = "Forma";
                 ref.enviar(msg);
             }
         });
@@ -51,7 +51,7 @@ public class PracticaConstancias extends AppCompatActivity implements ModalConfi
         tamano.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String msg = "PracticarTamano";
+                String msg = "Tamano";
                 ref.enviar(msg);
             }
         });
@@ -59,7 +59,7 @@ public class PracticaConstancias extends AppCompatActivity implements ModalConfi
         color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String msg = "PracticarColor";
+                String msg = "Color";
                 ref.enviar(msg);
             }
         });
