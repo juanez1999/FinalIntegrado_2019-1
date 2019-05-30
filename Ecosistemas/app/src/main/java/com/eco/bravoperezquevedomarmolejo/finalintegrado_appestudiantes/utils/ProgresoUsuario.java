@@ -5,14 +5,16 @@ public class ProgresoUsuario {
     private String prueba1;
     private String prueba2;
     private String prueba3;
+    private String codigo;
 
     public ProgresoUsuario() {
     }
 
-    public ProgresoUsuario(String prueba1, String prueba2, String prueba3) {
+    public ProgresoUsuario(String prueba1, String prueba2, String prueba3, String codigo) {
         this.prueba1 = prueba1;
         this.prueba2 = prueba2;
         this.prueba3 = prueba3;
+        this.codigo = codigo;
     }
 
     public String getPrueba1() {
@@ -37,5 +39,13 @@ public class ProgresoUsuario {
 
     public void setPrueba3(String prueba3) {
         this.prueba3 = prueba3;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }

@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.BottomNavigationViewHelper;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Codigo;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class Home extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class Home extends AppCompatActivity {
 
         Intent i = getIntent();
         codigoEstudiante = i.getStringExtra("Codigo");
+
+        Codigo.codigo = codigoEstudiante;
 
         setupNav();
 

@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.ModalConfirmarVolver;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.R;
+import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Codigo;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.Comunicacion;
 import com.eco.bravoperezquevedomarmolejo.finalintegrado_appestudiantes.utils.ProgresoUsuario;
 import com.google.firebase.database.DataSnapshot;
@@ -94,13 +95,21 @@ public class PracticaConstancias extends AppCompatActivity implements ModalConfi
         String msg = (String) arg;
 
         if(msg.matches("Correcto")) {
-            db.getReference().child("Progresos").child("PercepcionVisual").child(Home.codigoEstudiante).addListenerForSingleValueEvent(new ValueEventListener() {
+            db.getReference().child("Progresos").child("PercepcionVisual").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for(DataSnapshot child : dataSnapshot.getChildren()) {
+
                         ProgresoUsuario prog = child.getValue(ProgresoUsuario.class);
-                        Log.e("Alfa", prog.getPrueba1());
+                        if (prog.getCodigo().matches(Codigo.getCodigo())) {
+                            Log.e("Alfa", prog.getPrueba1());
+                            ProgresoUsuario newProg = new ProgresoUsuario("100", prog.getPrueba2(), prog.getPrueba3(), Codigo.codigo);
+                            db.getReference().child("Progresos").child("PercepcionVisual").child(Codigo.getCodigo()).setValue(newProg);
+                        }
                     }
+
+                    Intent i = new Intent(PracticaConstancias.this, Home.class);
+                    startActivity(i);
                 }
 
                 @Override
@@ -108,6 +117,9 @@ public class PracticaConstancias extends AppCompatActivity implements ModalConfi
 
                 }
             });
+        } else {
+            Intent i = new Intent(PracticaConstancias.this, Home.class);
+            startActivity(i);
         }
     }
 }
