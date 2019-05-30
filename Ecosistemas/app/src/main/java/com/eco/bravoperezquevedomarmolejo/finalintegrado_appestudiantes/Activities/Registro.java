@@ -37,9 +37,9 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         registrar=findViewById(R.id.btn_registro_registro);
-        codigo=findViewById(R.id.edt_codigo_registro);
-        correo=findViewById(R.id.edt_correo_registro);
-        contra1=findViewById(R.id.edt_contra1_registro);
+        codigo=findViewById(R.id.edt_codigo_olvidar);
+        correo=findViewById(R.id.edt_contra_olvidar);
+        contra1=findViewById(R.id.edt_contra1_olvidar);
         contra2=findViewById(R.id.edt_contra2_registro);
         db= FirebaseDatabase.getInstance();
         ref= db.getReference();

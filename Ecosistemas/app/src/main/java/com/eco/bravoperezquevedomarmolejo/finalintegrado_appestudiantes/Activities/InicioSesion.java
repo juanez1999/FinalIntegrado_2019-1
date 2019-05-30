@@ -35,6 +35,15 @@ public class InicioSesion extends AppCompatActivity {
         codigo = findViewById(R.id.edt_codigo_inicio);
         contrasena = findViewById(R.id.edt_contrasena_inicio);
         registrar = findViewById(R.id.tv_registrate_inicio);
+        olvidar = findViewById(R.id.tv_olvidar_inicio);
+
+        olvidar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(InicioSesion.this, OlvidarContrasena.class);
+                startActivity(i);
+            }
+        });
 
         login = findViewById(R.id.btn_incio_inicio);
 
