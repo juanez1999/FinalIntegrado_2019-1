@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ProgresosIndividuales"></activity>
+        <activity android:name=".ProgresosGeneral" />
         <activity
-            android:name="InicioSesion"
+            android:name=".InicioSesion"
             android:screenOrientation="portrait" />
         <activity
-            android:name="Registro"
+            android:name=".Registro"
             android:screenOrientation="portrait" />
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
