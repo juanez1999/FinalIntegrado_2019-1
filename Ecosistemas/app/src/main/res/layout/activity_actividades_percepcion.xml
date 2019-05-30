@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_login"
+    tools:context=".Activities.ActividadesPercepcion">
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/nav_actividadpercepcion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/White"
+        app:itemIconTint="@drawable/navegacion_global"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/global_nav" />
+
+    <TextView
+        android:id="@+id/tv_percepcion_percepcion"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefin_bold"
+        android:text="Percepción Visual"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <ImageButton
+        android:id="@+id/img_aprende_percepcion"
+        android:layout_width="107dp"
+        android:layout_height="115dp"
+        android:background="@null"
+        app:srcCompat="@drawable/aprende_boton"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <ImageButton
+        android:id="@+id/img_practica_percepcion"
+        android:layout_width="107dp"
+        android:layout_height="115dp"
+        android:background="@null"
+        app:srcCompat="@drawable/practica_boton"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="353dp" />
+
+    <ImageButton
+        android:id="@+id/img_experimenta_percepcion"
+        android:layout_width="107dp"
+        android:layout_height="115dp"
+        android:background="@null"
+        app:srcCompat="@drawable/experimenta_boton"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+    <TextView
+        android:id="@+id/tv_aprender_percepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Aprende"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <TextView
+        android:id="@+id/tv_practicar_percepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Practica"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <TextView
+        android:id="@+id/tv_practicar_percepcion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Experimenta"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="538dp" />
+
+    <ImageView
+        android:id="@+id/img_barraglobal_percepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:srcCompat="@drawable/navegacion"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</android.support.constraint.ConstraintLayout>
