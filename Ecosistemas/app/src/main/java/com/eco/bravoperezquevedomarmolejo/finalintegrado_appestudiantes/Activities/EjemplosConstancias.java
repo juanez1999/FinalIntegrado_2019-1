@@ -78,6 +78,7 @@ public class EjemplosConstancias extends AppCompatActivity implements ModalConfi
     @Override
     public void OnButtonClicked(String boton) {
         if(boton.matches("Confirmar")) {
+            ref.enviar("Continuar");
             Intent i = new Intent(EjemplosConstancias.this, AprendePercepcion.class);
             startActivity(i);
         }

@@ -10,15 +10,12 @@ import processing.core.PImage;
 
 public class Main extends PApplet implements Observer{
 	
-	private static Comunicacion com;
-	private ArrayList<PImage> imagenes;
+	private static Comunicacion ref;
+	private PImage[] imagenes;
 	private int variablePintar;
 	
 	public static void main(String[] args) {
-		PApplet.main("Main");
-		com= new Comunicacion();
-		Thread t = new Thread(com);
-		t.start();
+		PApplet.main("perezbravoquevedomarmolejo.Main");
 	}
 	
 	
@@ -27,17 +24,14 @@ public class Main extends PApplet implements Observer{
 	}
 	
 	public void setup() {
-		imagenes = new ArrayList<PImage>();
+		ref = Comunicacion.getRef();
+		imagenes = new PImage[5];
+		
+		
 	}
 	
 	public void draw() {
-		background(255);
-		for (int i = 0; i < imagenes.size(); i++) {
-			if(variablePintar==1) {
-				
-			}
-		}
-	
+		
 	}
 
 	@Override
