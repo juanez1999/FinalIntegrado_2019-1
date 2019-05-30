@@ -56,7 +56,7 @@ public class Comunicacion extends Observable implements Runnable{
             public void run() {
                 try {
                     byte[] buf = msg.getBytes();
-                    DatagramPacket p = new DatagramPacket(buf, buf.length, InetAddress.getByName("0.0.0.0"), 5000);
+                    DatagramPacket p = new DatagramPacket(buf, buf.length, InetAddress.getByName("172.30.173.117"), 5000);
                     socket.send(p);
                 } catch (IOException e) {
                     e.printStackTrace();

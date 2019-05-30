@@ -10,7 +10,7 @@ import java.util.Observable;
 public class Comunicacion extends Observable implements Runnable{
 
     private DatagramSocket socket;
-
+    private InetAddress ip;
     private static Comunicacion ref;
 
     private Comunicacion() {
@@ -34,7 +34,9 @@ public class Comunicacion extends Observable implements Runnable{
                 DatagramPacket p = new DatagramPacket(buf, buf.length);
                 socket.receive(p);
                 String msg = new String(buf).trim();
-
+                
+                ip = p.getAddress();
+                
                 setChanged();
                 notifyObservers(msg);
                 clearChanged();
@@ -56,7 +58,7 @@ public class Comunicacion extends Observable implements Runnable{
             public void run() {
                 try {
                     byte[] buf = msg.getBytes();
-                    DatagramPacket p = new DatagramPacket(buf, buf.length, InetAddress.getByName("0.0.0.0"), 5000);
+                    DatagramPacket p = new DatagramPacket(buf, buf.length, ip, 5000);
                     socket.send(p);
                 } catch (IOException e) {
                     e.printStackTrace();
